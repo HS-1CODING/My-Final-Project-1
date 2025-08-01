@@ -1,0 +1,454 @@
+/* Custom CSS */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+header h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Styles */
+.nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #ffc107;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Home Section */
+#home {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="20" cy="80" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  z-index: 1;
+}
+
+#home .container {
+  position: relative;
+  z-index: 2;
+}
+
+#home h2 {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+#home p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Carousel Enhancements */
+.carousel-item img {
+  filter: brightness(0.8);
+  transition: all 0.5s ease;
+}
+
+.carousel-item.active img {
+  filter: brightness(1);
+}
+
+.carousel-caption {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 193, 7, 0.8);
+  border-radius: 50%;
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-warning {
+  background: linear-gradient(45deg, #ffc107, #ff8c00);
+  border: none;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* About Section */
+#about {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(108, 117, 125, 0.1), transparent);
+}
+
+#about img {
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+#about .fas {
+  transition: all 0.3s ease;
+}
+
+#about .fas:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Rooms Section */
+#rooms {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-title i {
+  font-size: 1.2em;
+}
+
+.list-unstyled li {
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.list-unstyled li:hover {
+  color: #0d6efd;
+  padding-left: 10px;
+}
+
+.list-unstyled i {
+  width: 20px;
+}
+
+/* Menu Section */
+#menu {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+#menu .card {
+  border: none;
+  background: linear-gradient(145deg, #ffffff, #f1f3f4);
+}
+
+#menu .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+#menu .list-unstyled li {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+#menu .list-unstyled li:last-child {
+  border-bottom: none;
+}
+
+/* Gallery Section */
+#gallery {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+#gallery img {
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  position: relative;
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #343a40 0%, #1a1d20 100%);
+  position: relative;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+#contact .container {
+  position: relative;
+  z-index: 2;
+}
+
+#contact i {
+  transition: all 0.3s ease;
+}
+
+#contact i:hover {
+  transform: scale(1.2) rotate(10deg);
+  color: #ffc107;
+}
+
+.list-inline-item a {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.list-inline-item a:hover {
+  transform: translateY(-5px) scale(1.2);
+  color: #ffc107 !important;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+}
+
+footer i {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-item {
+    margin: 2px;
+  }
+  
+  #home h2 {
+    font-size: 2.5rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    background-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #home h2 {
+    font-size: 2rem;
+  }
+  
+  #home p {
+    font-size: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  #gallery img {
+    height: 200px;
+  }
+  
+  #contact .col-md-4 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ffc107, #ff8c00);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff8c00, #ffc107);
+}
+
+/* Loading animation for images */
+img {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Utility Classes */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%);
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.nav-link:focus {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .btn {
+    border: 1px solid black;
+    color: black;
+    background: white;
+  }
+}
